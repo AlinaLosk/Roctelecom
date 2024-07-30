@@ -49,13 +49,11 @@ def test_invalid_pass_registration(driver):
     # Заполнить личные данные в полях регистрации
     # Ввести имя пользователя
     driver.find_element(By.XPATH,
-                        '//*[@id="page-right"]/div[1]/div[1]/div[1]/form[1]/div[1]/div[1]/div[1]/input[1]').send_keys(
-        'Семен')
+                        '//*[@id="page-right"]/div[1]/div[1]/div[1]/form[1]/div[1]/div[1]/div[1]/input[1]').send_keys('Семен')
 
     # Заполнить поле "Фамилия"
     driver.find_element(By.XPATH,
-                        '//*[@id="page-right"]/div[1]/div[1]/div[1]/form[1]/div[1]/div[2]/div[1]/input[1]').send_keys(
-        'Ли-Про')
+                        '//*[@id="page-right"]/div[1]/div[1]/div[1]/form[1]/div[1]/div[2]/div[1]/input[1]').send_keys('Ли-Про')
     # Выбор региона оставить по умолчанию г. Москва
 
     # Ввести невалидный email
@@ -100,13 +98,11 @@ def test_invalid_email_registration(driver):
     # Заполнить личные данные в полях регистрации
     # Ввести имя пользователя
     driver.find_element(By.XPATH,
-                        '//*[@id="page-right"]/div[1]/div[1]/div[1]/form[1]/div[1]/div[1]/div[1]/input[1]').send_keys(
-        'Семен')
+                        '//*[@id="page-right"]/div[1]/div[1]/div[1]/form[1]/div[1]/div[1]/div[1]/input[1]').send_keys('Семен')
 
     # Заполнить поле "Фамилия"
     driver.find_element(By.XPATH,
-                        '//*[@id="page-right"]/div[1]/div[1]/div[1]/form[1]/div[1]/div[2]/div[1]/input[1]').send_keys(
-        'Ли-Про')
+                        '//*[@id="page-right"]/div[1]/div[1]/div[1]/form[1]/div[1]/div[2]/div[1]/input[1]').send_keys('Ли-Про')
     # Выбор региона оставить по умолчанию г. Москва
 
     # Ввести нвалидный email
@@ -141,13 +137,11 @@ def test_invalid_name_registration(driver):
     # Заполнить личные данные в полях регистрации
     # Ввести имя
     driver.find_element(By.XPATH,
-                        '//*[@id="page-right"]/div[1]/div[1]/div[1]/form[1]/div[1]/div[1]/div[1]/input[1]').send_keys(
-        '565jkl')
+                        '//*[@id="page-right"]/div[1]/div[1]/div[1]/form[1]/div[1]/div[1]/div[1]/input[1]').send_keys('565jkl')
 
     # Заполнить поле "Фамилия"
     driver.find_element(By.XPATH,
-                        '//*[@id="page-right"]/div[1]/div[1]/div[1]/form[1]/div[1]/div[2]/div[1]/input[1]').send_keys(
-        'Ли-Про')
+                        '//*[@id="page-right"]/div[1]/div[1]/div[1]/form[1]/div[1]/div[2]/div[1]/input[1]').send_keys('Ли-Про')
     # Выбор региона оставить по умолчанию г. Москва
 
     # Ввести мобильный телефон
@@ -181,13 +175,11 @@ def test_invalid_name_and_lastName_registration(driver):
     # Заполнить личные данные в полях регистрации
     # Ввести невалидные данные в поле "Имя"
     driver.find_element(By.XPATH,
-                        '//*[@id="page-right"]/div[1]/div[1]/div[1]/form[1]/div[1]/div[1]/div[1]/input[1]').send_keys(
-        '565jkl')
+                        '//*[@id="page-right"]/div[1]/div[1]/div[1]/form[1]/div[1]/div[1]/div[1]/input[1]').send_keys('565jkl')
 
     # Заполнить поле Фамилия невалидными
     driver.find_element(By.XPATH,
-                        '//*[@id="page-right"]/div[1]/div[1]/div[1]/form[1]/div[1]/div[2]/div[1]/input[1]').send_keys(
-        '-55犯务554 kj')
+                        '//*[@id="page-right"]/div[1]/div[1]/div[1]/form[1]/div[1]/div[2]/div[1]/input[1]').send_keys('-55犯务554 kj')
     # Выбор региона оставить по умолчанию г. Москва
 
     # Ввести мобильный телефон
@@ -320,7 +312,7 @@ def password_with_hieroglyphs(driver):
     # Нажать кнопку "Зарегистрироваться"
     driver.find_element(By.XPATH, '//*[@id="page-right"]/div/div[1]/div/form/button').click()
     time.sleep(5)
-
+    # Проверка, что регистрация не успешна
     assert driver.find_element(By.XPATH,'//*[@id="page-right"]/div/div[1]/div/form/div[4]/div[1]/span').text == 'Пароль должен содержать только латинские буквы'
 
 # Позитивный сценарий:
