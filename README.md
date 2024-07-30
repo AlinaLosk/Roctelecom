@@ -1,5 +1,6 @@
 # Roctelecom
 Проект тестирования и автоматизации веб-сайта Ростелеком.
+
 Тест-кейсы и баг-репорты расположены по ссылке:
 https://docs.google.com/spreadsheets/d/1LUgb-yImSOMoXu1G-LeVTSACovr-bdqX0Ud8tIAeOnQ/edit?usp=sharing
 
